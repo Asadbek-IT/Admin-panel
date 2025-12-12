@@ -44,9 +44,9 @@ const LoginPage = () => {
             } 
 
             toast.success('succsesfull!', {
-                position: "top-center",
-                theme: "dark"
-                });
+                position: "top-center"
+
+            });
 
                 localStorage.setItem('token', token);
 

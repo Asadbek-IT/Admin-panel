@@ -1,27 +1,22 @@
-import React from 'react'
-import Sidebar from "../components/sidebar/Sidebar"
-import Navbar from '../components/navbar/Navbar'
-import Table from '../components/ui/Table'
-
+import React from "react";
+import Sidebar from "../components/sidebar/Sidebar";
+import Navbar from "../components/navbar/Navbar";
+import { Outlet, Route, Routes } from "react-router-dom";
 
 const Dashboard = () => {
   return (
     <div className="flex">
-  
-    <Sidebar/>
+      <Sidebar />
 
-  <div className="flex-1">
-    
-      <Navbar/>
+      <div className="flex-1">
+        <Navbar />
 
-    <main>
-      <Table/>
-    </main>
-    
-  </div>
+        <main>
+          <Outlet />
+        </main>
+      </div>
+    </div>
+  );
+};
 
-</div>
-  )
-}
-
-export default Dashboard
+export default Dashboard;
